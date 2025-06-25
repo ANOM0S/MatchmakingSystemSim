@@ -1,5 +1,5 @@
 ![Tests](https://github.com/ANOM0S/MatchmakingSystemSim/actions/workflows/build.yml/badge.svg)
-![Coverage](https://https://app.codecov.io/gh/ANOM0S/MatchmakingSystemSim/branch/main/graph/badge.svg)
+![Coverage](https://codecov.io/gh/ANOM0S/MatchmakingSystemSim/branch/main/graph/badge.svg)
 
 # 🎮 Symulacja systemu rankingowego graczy (1v1)
 

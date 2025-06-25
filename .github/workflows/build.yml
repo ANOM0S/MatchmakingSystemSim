@@ -1,26 +1,24 @@
-name: Gradle CI
+name: Java CI with Gradle
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push, pull_request]  # Uruchamiaj przy pushu i PR
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up JDK 17
+      - uses: actions/checkout@v4
+        
+      - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: '17'  # Ustaw zgodnie z wersją w projekcie
           distribution: 'temurin'
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
-      - name: Build and test
-        run: ./gradlew clean build
+      
+      - name: Run tests with Gradle
+        run: ./gradlew test jacocoTestReport  # Uruchom testy i generuj raport coverage
+        
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: build/reports/jacoco/test/jacocoTestReport.xml  # Ścieżka do raportu
+          fail_ci_if_error: false  # Nie przerywaj CI jeśli upload się nie uda

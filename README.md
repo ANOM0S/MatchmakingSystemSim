@@ -1,3 +1,5 @@
+![Build Status](https://github.com/ANOM0S/MatchmakingSystemSim/actions/workflows/build.yml/badge.svg)
+
 # 🎮 Symulacja systemu rankingowego graczy (1v1)
 
 Projekt implementuje agentową symulację systemu rankingowego inspirowanego grami sieciowymi typu PvP (Player vs Player). Celem symulacji jest odwzorowanie zachowań graczy, rozwoju ich statystyk oraz ewolucji pozycji w rankingu na przestrzeni wielu epok.
@@ -40,10 +42,12 @@ cd project-folder
 ├── src/
 │   ├── main/
 │   │   └── java/
-│   │       ├── engine/   # GameEngine, Match, MatchSimulator
-│   │       ├── model/    # Player, Stats, Rank, EmotionState, Strategy
-│   │       ├── util/     # Logger, RankCalculator
-│   │       └── Main.java # punkt wejścia
+|   |       └──
+│   │          ├── engine/     # GameEngine, Match, MatchSimulator
+│   │          ├── model/      # Player, Stats, Rank, EmotionState, Strategy
+│   │          ├── logic/      # Logger, RankCalculator
+│   │          ├── simulation/ # Match, MatchResult, MatchSimulator
+│   │          └── Main.java   # punkt wejścia
 │   └── test/
 │       └── java/         # testy JUnit
 ```
@@ -70,12 +74,6 @@ Podczas symulacji możliwe jest zapisywanie danych graczy do pliku epoch_stats.c
 - strategię,
 - stan emocjonalny.
 
-Plik ten można otworzyć w Excelu, Google Sheets lub zaimportować w Pythonie (np. do matplotlib / pandas) w celu tworzenia wykresów, np.:
-
-- MMR w czasie,
-- zmiana emocji,
-- rozkład rang końcowych.
-
 ## 💡 Możliwości rozwoju
 Ten projekt można łatwo rozbudować m.in. o:
 
@@ -85,4 +83,3 @@ Ten projekt można łatwo rozbudować m.in. o:
 - GUI (np. JavaFX lub Swing) z widokiem rankingu i wykresami,
 - eksport wyników do PDF / wykresów SVG,
 - analizy porównawcze wpływu strategii na wyniki (np. wykresy MMR vs. emocje).
-

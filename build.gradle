@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'jacoco'
 }
 
 group = 'ranked.sim'
@@ -33,4 +34,5 @@ jacocoTestReport {
 
 test {
     useJUnitPlatform()
+    finalizedBy jacocoTestReport
 }

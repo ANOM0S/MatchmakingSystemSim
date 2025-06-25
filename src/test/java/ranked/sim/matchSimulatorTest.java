@@ -38,3 +38,4 @@ public class matchSimulatorTest {
         assertTrue(wins > 70); // silniejszy wygrywa w większości
     }
 }
+

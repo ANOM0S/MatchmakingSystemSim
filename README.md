@@ -1,3 +1,5 @@
+![Build Status](https://github.com/ANOM0S/MatchmakingSystemSim/actions/workflows/build.yml/badge.svg)
+
 # 🎮 Symulacja systemu rankingowego graczy (1v1)
 
 Projekt implementuje agentową symulację systemu rankingowego inspirowanego grami sieciowymi typu PvP (Player vs Player). Celem symulacji jest odwzorowanie zachowań graczy, rozwoju ich statystyk oraz ewolucji pozycji w rankingu na przestrzeni wielu epok.

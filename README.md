@@ -40,10 +40,12 @@ cd project-folder
 ├── src/
 │   ├── main/
 │   │   └── java/
-│   │       ├── engine/   # GameEngine, Match, MatchSimulator
-│   │       ├── model/    # Player, Stats, Rank, EmotionState, Strategy
-│   │       ├── util/     # Logger, RankCalculator
-│   │       └── Main.java # punkt wejścia
+|   |       └──
+│   │          ├── engine/     # GameEngine, Match, MatchSimulator
+│   │          ├── model/      # Player, Stats, Rank, EmotionState, Strategy
+│   │          ├── logic/      # Logger, RankCalculator
+│   │          ├── simulation/ # Match, MatchResult, MatchSimulator
+│   │          └── Main.java   # punkt wejścia
 │   └── test/
 │       └── java/         # testy JUnit
 ```
@@ -69,12 +71,6 @@ Podczas symulacji możliwe jest zapisywanie danych graczy do pliku epoch_stats.c
 - punkty,
 - strategię,
 - stan emocjonalny.
-
-Plik ten można otworzyć w Excelu, Google Sheets lub zaimportować w Pythonie (np. do matplotlib / pandas) w celu tworzenia wykresów, np.:
-
-- MMR w czasie,
-- zmiana emocji,
-- rozkład rang końcowych.
 
 ## 💡 Możliwości rozwoju
 Ten projekt można łatwo rozbudować m.in. o:
